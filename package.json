@@ -1,0 +1,22 @@
+{
+  "name": "videocall-easyrtc",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "keywords": [
+    "easyrtc",
+    "socketio",
+    "express"
+  ],
+  "author": "dzungvt",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "*",
+    "express": "*",
+    "socket.io": "*",
+    "easyrtc": "*"
+  }
+}

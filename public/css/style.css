@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+    background: #ebebeb;
+}
+
+.signup {
+border-radius: 10px;
+background: #fff;
+display: block;
+margin: auto;
+width: 350px;
+margin-top: 10%;
+position: relative;
+overflow: hidden;
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 15px;
+padding-bottom: 15px;
+border: 1px solid silver;
+}
+
+.chatInfo {
+    margin-left: 2%;
+    display: inline-block;
+}
+
+.callbox_notification {
+    top: 25%;
+    right: 25%;
+    position: absolute;
+}
+
+.videochat {
+    padding-top: 50px;
+    position: relative;
+}
+
+.videochat .vdRemoteStream {
+    margin-left: 5px;
+    width: 640px;
+    height: 480px;
+    border-radius: 10px;
+}
+
+.videochat .listIcon {
+    position: absolute;
+    top: 85%;
+    left: 24%;
+    display: inline-block;
+}
+
+
+.videochat .listIcon i {
+    font-size: 40px;
+    color: red;
+    margin: 30px;
+}
+
+.vdLocalStream {
+    margin-top: 50%;
+    border-radius: 10px;
+    width: 320px;
+    height: 240px;
+}
+
+
+.ulList_clone {
+    display: none;
+}
+
+#ulUser li {
+    border-bottom: 1px solid #f5f5f5;
+    padding: 8px 5px;
+}
+
+#ulUser li:hover {
+    background: #7fffd4;
+}

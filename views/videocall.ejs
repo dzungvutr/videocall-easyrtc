@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/easyrtc/easyrtc.js"></script>
+    <script type="text/javascript" src="videocall.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylessheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>dzungvt videocall</title>
+</head>
+
+<body style="background: #ebebeb;">
+    <div class="container">
+        <div class="row">
+            <div id="div-chat" class="chatInfo">
+                <div>
+                    <h3 id="my-account" class="myaccount">Account : </h3>
+                    <h3 id="my-peer-id" class="mypeer">PeerId : </h3>
+                </div>
+                <p class="useronline"> User Online : </p>
+                <ul class="list-unstyled" id="ulUser">
+                </ul>
+            </div>
+            <div id="div-video" class="videochat">
+                <video id="remoteStream" class="vdRemoteStream" autoplay>
+                </video>
+
+                <div id="listIcon" class="listIcon">
+                    <i id="icnRejectVideo" class="material-icons">videocam</i>
+                    <i id="icnRejectAudio" class="material-icons">mic</i>
+                    <i id="icnCancelCall" class="material-icons">call_end</i>
+                </div>
+            </div>
+            <div id="div-video-localstream">
+                <video id="localStream" class="vdLocalStream" autoplay muted>
+                </video>
+            </div>
+            <div id="acceptCallBox" class="panel panel-info callbox_notification">
+                <div id="acceptCallLabel" class="panel-heading"></div>
+                <div class="panel-body">
+                    <button id="callAcceptButton" class="btn btn-success col-md-6">Accept</button>
+                    <button id="callRejectButton" class="btn btn-danger col-md-6">Reject</button>
+                </div>
+            </div>
+            
+            <!-- sign up -->
+            <div id="div-sign-up" class="signup">
+                    <h2 style="text-align: center;">SNOWCHAT LOGIN</h2>
+                    <div class="form-group">
+                        <label for="usr">USERNAME</label>
+                        <input type="text" id="txtUsername" class="form-control" placeholder="Write Your Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pwd">PASSWORD</label>
+                        <input type="password" id="txtPassword" class="form-control" placeholder="Write Your Password">
+                    </div>
+                    <button id="btnSignUp" class="btn btn-success">Sign Up</button>
+            </div>
+            <ul class="list-unstyled ulList_clone">
+                <li>
+                    <div id="imgAvatar" style="display: inline-block; ">
+                        <img src="css/person-outline-filled.png" style="border-radius: 50%">
+                    </div>
+                    <div id="txtName" style="display: inline-block; padding-left: 8px">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
